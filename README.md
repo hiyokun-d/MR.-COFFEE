@@ -6,5 +6,10 @@ so this is just a simple web for my assignment in binus university to make an ap
 
 ## how to run this?
 
-you can access the web at
+you can access the web at https://hiyokun-d.github.io/MR.-COFFEE/
+
 also if you want to see the figma you can access it at the file that i already put on "for lecture" folder
+
+## how to contribute?
+
+you can't because it's for my assignment and you can't modify anything
