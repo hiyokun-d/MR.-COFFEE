@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 160" width="80" height="100">
+  <!-- Coffee Cup Scroll Indicator -->
+  
+  <!-- Background Frame/Mouse -->
+  <rect id="scrollFrame" x="30" y="10" width="40" height="80" rx="20" ry="20" fill="none" stroke="#8B5A2B" stroke-width="3" opacity="0.8" />
+  
+  <!-- Scroll Wheel/Button -->
+  <circle id="scrollWheel" cx="50" cy="30" r="6" fill="#8B5A2B" opacity="0.7">
+    <animate 
+      attributeName="cy" 
+      values="30;50;30" 
+      dur="2s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
+      begin="0.5s" />
+    <animate 
+      attributeName="opacity" 
+      values="0.7;1;0.7" 
+      dur="2s" 
+      repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
+      begin="0.5s" />
+  </circle>
+  
+  <!-- Mouse Cable - Styled like Steam -->
+  <path id="cable" d="M50,10 C55,5 60,-2 65,1 S68,10 65,15" stroke="#8B5A2B" stroke-width="1.5" fill="none" opacity="0.5">
+    <animate
+      attributeName="d"
+      values="M50,10 C55,5 60,-2 65,1 S68,10 65,15;
+              M50,10 C55,3 62,-3 67,2 S70,12 65,17;
+              M50,10 C55,5 60,-2 65,1 S68,10 65,15"
+      dur="4s"
+      repeatCount="indefinite" />
+  </path>
+  
+  <!-- Down Arrows -->
+  <g id="arrows" fill="#8B5A2B">
+    <!-- Arrow 1 -->
+    <path id="arrow1" d="M50,100 L40,90 L60,90 Z">
+      <animate 
+        attributeName="opacity" 
+        values="0.2;1;0.2" 
+        dur="2s" 
+        repeatCount="indefinite"
+        begin="0s" />
+      <animate
+        attributeName="transform"
+        type="translate"
+        values="0 0; 0 5; 0 0"
+        dur="2s"
+        repeatCount="indefinite"
+        begin="0s" />
+    </path>
+    
+    <!-- Arrow 2 -->
+    <path id="arrow2" d="M50,115 L40,105 L60,105 Z">
+      <animate 
+        attributeName="opacity" 
+        values="0.2;1;0.2" 
+        dur="2s" 
+        repeatCount="indefinite"
+        begin="0.3s" />
+      <animate
+        attributeName="transform"
+        type="translate"
+        values="0 0; 0 5; 0 0"
+        dur="2s"
+        repeatCount="indefinite"
+        begin="0.3s" />
+    </path>
+    
+ </g>
+  
+  <!-- Steam Effect -->
+  <g id="steam" opacity="0.5">
+    <path id="steam1" d="M50,9 C52,5 54,4 56,5 C58,6 58,9 56,11 C54,13 52,12 50,9" fill="none" stroke="#8B5A2B" stroke-width="1">
+      <animate 
+        attributeName="d" 
+        values="M50,9 C52,5 54,4 56,5 C58,6 58,9 56,11 C54,13 52,12 50,9;
+                M50,9 C52,3 56,0 59,2 C62,4 61,9 58,12 C55,15 52,13 50,9;
+                M50,9 C52,5 54,4 56,5 C58,6 58,9 56,11 C54,13 52,12 50,9" 
+        dur="4s" 
+        repeatCount="indefinite" />
+      <animate 
+        attributeName="opacity" 
+        values="0.5;0;0.5" 
+        dur="4s" 
+        repeatCount="indefinite" />
+    </path>
+    <path id="steam2" d="M46,7 C44,3 40,2 38,4 C36,6 37,10 40,12 C43,14 46,12 46,7" fill="none" stroke="#8B5A2B" stroke-width="1">
+      <animate 
+        attributeName="d" 
+        values="M46,7 C44,3 40,2 38,4 C36,6 37,10 40,12 C43,14 46,12 46,7;
+                M46,7 C43,1 38,-1 35,2 C32,5 34,11 38,14 C42,17 46,14 46,7;
+                M46,7 C44,3 40,2 38,4 C36,6 37,10 40,12 C43,14 46,12 46,7" 
+        dur="5s" 
+        repeatCount="indefinite" />
+      <animate 
+        attributeName="opacity" 
+        values="0.5;0;0.5" 
+        dur="5s" 
+        repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Pulse effect -->
+  <circle cx="50" cy="30" r="25" fill="#8B5A2B" opacity="0">
+    <animate
+      attributeName="r"
+      values="10;35"
+      dur="2s"
+      repeatCount="indefinite" />
+    <animate
+      attributeName="opacity"
+      values="0.3;0"
+      dur="2s"
+      repeatCount="indefinite" />
+  </circle>
+</svg>

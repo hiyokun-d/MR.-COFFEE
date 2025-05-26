@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../styles/order.css">
+</head>
+
+<body>
+  <nav>
+    <div class="navLeft quicksand-bolder">
+      <img src="../assets/coffee-bean-animate.svg" alt="coffee icon" />
+      <h1>MR. COFFEE</h1>
+    </div>
+    <div id="navButton" class="navRight">
+      <div class="show"></div>
+      <div class="show middle"></div>
+      <div class="show"></div>
+    </div>
+    <div id="content" class="navList close">
+      <div>
+        <ul>
+          <li><a href="../index.html">home</a></li>
+          <li><a href="rewards.html">rewards</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="menu.html">menu</a></li>
+          <li><a href="order.html">order</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="order-container">
+      <!-- Coffee Cup Builder -->
+      <div class="cup-builder">
+        <svg class="cup-svg" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cup base -->
+          <path class="cup-base" d="M 60 150 L 60 320 Q 60 340 80 340 L 180 340 Q 200 340 200 320 L 200 150 Z" />
+
+          <!-- Cup handle -->
+          <path class="cup-handle" d="M 200 200 Q 230 200 230 230 Q 230 260 200 260" />
+
+          <!-- Coffee layers (bottom to top) -->
+          <rect class="coffee-layer espresso-layer" x="65" y="300" width="130" height="35" rx="5" />
+          <rect class="coffee-layer milk-layer" x="65" y="220" width="130" height="80" rx="5" />
+          <ellipse class="coffee-layer foam-layer" cx="130" cy="210" rx="65" ry="15" />
+
+          <!-- Steam lines -->
+          <path class="steam steam1" d="M 110 180 Q 115 160 110 140 Q 105 120 110 100" />
+          <path class="steam steam2" d="M 130 175 Q 135 155 130 135 Q 125 115 130 95" />
+          <path class="steam steam3" d="M 150 180 Q 155 160 150 140 Q 145 120 150 100" />
+
+          <!-- Cup rim -->
+          <ellipse fill="none" stroke="#8B4513" stroke-width="3" cx="130" cy="150" rx="70" ry="8" />
+
+          <!-- Decorative coffee bean -->
+          <ellipse fill="#8B4513" cx="130" cy="370" rx="8" ry="4" />
+          <line stroke="#D2691E" stroke-width="1" x1="130" y1="366" x2="130" y2="374" />
+        </svg>
+      </div>
+
+      <!-- Order Form -->
+      <div class="order-form">
+        <h2>☕ Silahkan pesan coffee mu sendiri</h2>
+
+        <!-- Coffee Type Selection -->
+        <div class="form-section">
+          <h3>🎯 Pilih Jenis Kopi</h3>
+          <div class="option-grid">
+            <label class="option-btn">
+              <input type="radio" name="coffeeType" value="espresso" data-price="35000">
+              <strong>Espresso</strong>
+              <span class="price">Rp 35.000</span>
+            </label>
+            <label class="option-btn">
+              <input type="radio" name="coffeeType" value="americano" data-price="42500">
+              <strong>Americano</strong>
+              <span class="price">Rp 42.500</span>
+            </label>
+            <label class="option-btn">
+              <input type="radio" name="coffeeType" value="cappuccino" data-price="47500">
+              <strong>Cappuccino</strong>
+              <span class="price">Rp 47.500</span>
+            </label>
+            <label class="option-btn">
+              <input type="radio" name="coffeeType" value="latte" data-price="52500">
+              <strong>Latte</strong>
+              <span class="price">Rp 52.500</span>
+            </label>
+            <label class="option-btn">
+              <input type="radio" name="coffeeType" value="mocha" data-price="57500">
+              <strong>Mocha</strong>
+              <span class="price">Rp 57.500</span>
+            </label>
+            <label class="option-btn">
+              <input type="radio" name="coffeeType" value="macchiato" data-price="55000">
+              <strong>Macchiato</strong>
+              <span class="price">Rp 55.000</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Size Selection (unchanged) -->
+        <div class="form-section">
+          <h3>📏 Pilih ukuranmu</h3>
+          <div class="option-grid size-options">
+            <label class="option-btn">
+              <input type="radio" name="coffeeSize" value="small" data-multiplier="1">
+              <strong>Small</strong>
+              <span class="price">8oz</span>
+            </label>
+            <label class="option-btn">
+              <input type="radio" name="coffeeSize" value="medium" data-multiplier="1.2">
+              <strong>Medium</strong>
+              <span class="price">12oz (+20%)</span>
+            </label>
+            <label class="option-btn">
+              <input type="radio" name="coffeeSize" value="large" data-multiplier="1.5">
+              <strong>Large</strong>
+              <span class="price">16oz (+50%)</span>
+            </label>
+          </div>
+        </div> <!-- Customer Information -->
+
+        <div class="customer-info">
+          <div class="input-group">
+            <label for="customerName">nama kamu siapa?</label>
+            <input type="text" id="customerName" required>
+          </div>
+          <div class="input-group">
+            <label for="phoneNumber">Nomor hp kamu pls</label>
+            <input type="tel" id="phoneNumber" required>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+          <h4>📋 Order Summary</h4>
+          <div class="summary-item">
+            <span>Coffee:</span>
+            <span id="selectedCoffee">Pilih dulu</span>
+          </div>
+          <div class="summary-item">
+            <span>Size:</span>
+            <span id="selectedSize">Pilih dulu</span>
+          </div>
+          <div class="summary-item total">
+            <span>Total:</span>
+            <span id="totalPrice">Rp. 0.000</span>
+          </div>
+        </div>
+
+        <button class="place-order-btn" id="placeOrderBtn" disabled>
+          Place Order
+        </button>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="order-success" id="successModal">
+      <div class="success-content">
+        <div class="success-icon">✅</div>
+        <h2>Order Placed Successfully!</h2>
+        <p>Kami sedang buat kopi dengan ekstra meme dan sarkas</p>
+        <p><strong>Estimated time: 5-8 minutes</strong></p>
+        <p>Kami akan chat atau memanggilmu jika kami udah tutup ya makasih</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script/nav.js"></script>
+  <script src="../script/order.js"></script>
+</body>
+
+</html>

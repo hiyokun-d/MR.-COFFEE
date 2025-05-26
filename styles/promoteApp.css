@@ -1,0 +1,440 @@
+* {
+  /* border: 1px solid red; */
+}
+
+.promoteApp {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  .promotionApp {
+    align-self: center;
+    margin-left: clamp(10px, 5vw, 30px);
+    width: clamp(680px, 40%, 600px);
+
+    h1,
+    h2,
+    h3 {
+      margin: 0
+    }
+
+    h2 {
+      font-size: clamp(24px, 4.5vw, 50px);
+      margin-top: 30px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 50px);
+      color: #6A462F;
+    }
+
+    h2,
+    h1 {
+      font-size: 50px;
+    }
+
+    h3 {
+      font-size: clamp(20px, 4vw, 40px);
+      margin-bottom: 30px;
+      margin-top: 20px;
+      margin-left: clamp(20px, 5vw, 50px);
+    }
+
+    .buttonDownload {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      overflow-x: none;
+
+      button {
+        display: block;
+        margin: 2rem auto;
+        width: clamp(fit-content, 28vw, 280px);
+        justify-self: center;
+        background-color: #4E342E;
+        color: #EBEBEB;
+        font-size: 40px;
+        border: none;
+        padding: 15px;
+        text-align: center;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.menuPromotion {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+
+  .promotion {
+    width: 234px;
+    background-color: #623B34;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    height: 369px;
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      margin-left: 10px
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      width: 220px;
+    }
+
+    button {
+      display: block;
+      margin: 1.5rem auto;
+      font-size: 13px;
+      text-align: center;
+      background-color: #3E2723;
+      color: white;
+      padding: 10px;
+      border: none;
+      position: absolute;
+      bottom: -18px;
+      left: 60px
+    }
+
+    img {
+      width: 234px;
+      height: 209px;
+      object-fit: cover;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      pointer-events: none;
+    }
+  }
+}
+
+.promoteApp {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionSlideIn 1.2s ease-out forwards;
+}
+
+.promotionApp {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: contentSlideIn 1s ease-out forwards 0.3s;
+  transition: transform 0.3s ease;
+}
+
+.promotionApp:hover {
+  transform: translateX(0) scale(1.02);
+}
+
+.mockup {
+  opacity: 0;
+  transform: translateX(30px) rotateY(-15deg);
+  animation: mockupSlideIn 1s ease-out forwards 0.8s;
+  transition: transform 0.3s ease;
+}
+
+.mockup:hover {
+  transform: translateX(30px) rotateY(0deg) scale(1.05);
+}
+
+.mockup img {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.mockup:hover img {
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+}
+
+/* Text Animations */
+.promotionApp h1,
+.promotionApp h2,
+.promotionApp h3 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textFadeUp 0.8s ease-out forwards;
+}
+
+.promotionApp h2 {
+  animation-delay: 0.5s;
+  transition: transform 0.3s ease;
+}
+
+.promotionApp h2:hover {
+  transform: translateX(10px);
+}
+
+.promotionApp h1 {
+  animation-delay: 0.7s;
+  transition: all 0.3s ease;
+}
+
+.promotionApp h1:hover {
+  color: #8B5A3C;
+  text-shadow: 0 2px 8px rgba(106, 70, 47, 0.4);
+}
+
+.promotionApp h3 {
+  animation-delay: 0.9s;
+  position: relative;
+  overflow: hidden;
+}
+
+.promotionApp h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.promotionApp h3:hover::before {
+  left: 100%;
+}
+
+/* Button Animations */
+.buttonDownload {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: buttonGroupSlideIn 1s ease-out forwards 1.1s;
+}
+
+.buttonDownload button,
+.buttonDownload a button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttonDownload button::before,
+.buttonDownload a button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.buttonDownload button:hover::before,
+.buttonDownload a button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.buttonDownload button:hover,
+.buttonDownload a button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(78, 52, 46, 0.4);
+}
+
+.buttonDownload button:active,
+.buttonDownload a button:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Menu Promotion Section */
+.menuPromotion {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: sectionSlideIn 1s ease-out forwards 0.5s;
+}
+
+.promotion {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: cardSlideIn 0.8s ease-out forwards 0.7s;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.promotion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.8s ease;
+  z-index: 1;
+}
+
+.promotion:hover::before {
+  left: 100%;
+}
+
+.promotion:hover {
+  transform: translateY(-8px) scale(1.05) rotateY(5deg);
+  box-shadow: 0 15px 35px rgba(98, 59, 52, 0.4);
+}
+
+.promotion:active {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.promotion h1 {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.promotion:hover h1 {
+  transform: translateX(5px);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.promotion p {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.promotion:hover p {
+  transform: translateX(3px);
+}
+
+.promotion button {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.promotion button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(62, 39, 35, 0.5);
+}
+
+.promotion img {
+  transition: all 0.4s ease;
+}
+
+.promotion:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Section Title Animation */
+h1.quicksand-700 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: titleFadeIn 0.8s ease-out forwards 1.5s;
+  transition: all 0.3s ease;
+}
+
+h1.quicksand-700:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 4px 12px rgba(106, 70, 47, 0.3);
+}
+
+/* Keyframe Animations */
+@keyframes sectionSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mockupSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) rotateY(-15deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(30px) rotateY(-15deg);
+  }
+}
+
+@keyframes textFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonGroupSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

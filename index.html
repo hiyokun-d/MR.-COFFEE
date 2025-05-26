@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/topMenu.css">
+</head>
+
+<body>
+  <nav>
+    <div class="navLeft quicksand-bolder">
+      <img src="assets/coffee-bean-animate.svg" alt="coffee icon" />
+      <h1>MR. COFFEE</h1>
+    </div>
+    <div id="navButton" class="navRight">
+      <div class="show"></div>
+      <div class="show middle"></div>
+      <div class="show"></div>
+    </div>
+    <div id="content" class="navList close">
+      <div>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="pages/rewards.html">rewards</a></li>
+          <li><a href="pages/about.html">about</a></li>
+          <li><a href="pages/menu.html">menu</a></li>
+          <li><a href="pages/order.html">order</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INTRO SECTION -->
+  <div id="intro"></div>
+
+  <!-- home page -->
+  <div class="home">
+    <section class="landing-page">
+      <div class="homeLeft">
+        <h1 class="quicksand-700">MR. COFFEE</h1>
+        <p class="quicksand-bolder" id="tagline">
+          i don't even know what should i type here, just buy our coffee pls
+        </p>
+        <div class="coffee-bean" id="coffee-bean"></div>
+      </div>
+      <div class="homeRight">
+        <img src="assets/coffee-bean-animate.svg" alt="coffee icon" />
+        <object class="blob-svg" data="assets/blob.svg" type="image/svg+xml"></object>
+      </div>
+    </section>
+
+    <object id="scroll-indicator" class="scroll-svg" data="assets/scroll.svg" type="image/svg+xml"></object>
+
+    <section class="topMenu">
+      <h1 class="inter-900">OUR TOP MENU</h1>
+      <div class="card-container">
+        <div class="card">
+          <img src="assets/ -2.jpg" alt="assets whatever i called it">
+          <h3 class="inter-900">Coffee machine</h3>
+          <p class="inter-100">Rp. <span actual-price="69.300">69.300</span></p>
+          <div>
+            <a href="">BUY</a>
+            <a href="">Detail</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/Hq720.webp" alt="assets whatever i called it">
+          <h3 class="inter-900">Assasino Cappucino</h3>
+          <p class="inter-100">Rp. <span actual-price="19.300">19.300</span></p>
+          <div>
+            <a href="">BUY</a>
+            <a href="">Detail</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/Unknown.jpg" alt="assets whatever i called it">
+          <h3 class="inter-900">Cute Coffee</h3>
+          <p class="inter-100">Rp. <span actual-price="29.300">29.300</span></p>
+          <div>
+            <a href="">BUY</a>
+            <a href="">Detail</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/Unknown-2.jpg" alt="assets whatever i called it">
+          <h3 class="inter-900">sleepy buddy</h3>
+          <p class="inter-100">Rp. <span actual-price="12.300">12.300</span></p>
+          <div>
+            <a href="">BUY</a>
+            <a href="">Detail</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/Making Us Laugh This Week | 12 Memes for the….jpg" alt="assets whatever i called it">
+          <h3 class="inter-900">Meme frappe</h3>
+          <p class="inter-100">Rp. <span actual-price="69.300">69.300</span></p>
+          <div>
+            <a href="">BUY</a>
+            <a href="">Detail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script/nav.js"></script>
+  <script src="script/coffee-bean-spawner.js"></script>
+  <script src="script/LandingPageAnimate.js"></script>
+  <script src="script/topMenu.js"></script>
+</body>
+
+</html>

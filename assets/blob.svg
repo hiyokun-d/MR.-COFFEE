@@ -1,0 +1,57 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main blob with rich coffee color gradient -->
+  <defs>
+    <linearGradient id="coffeeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C5034">
+        <animate attributeName="stop-color" values="#7C5034;#A67C52;#7C5034" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#3E1C0A">
+        <animate attributeName="stop-color" values="#3E1C0A;#5C3A2E;#3E1C0A" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <!-- Steam effect -->
+    <filter id="steam" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed="1" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+    </filter>
+  </defs>
+  
+  <!-- Main blob with more complex animation -->
+  <path fill="url(#coffeeGradient)" transform="translate(100 100)">
+    <animate attributeName="d" dur="16s" repeatCount="indefinite" values="
+      M32.9,-46.7C47.6,-41.8,68,-41.1,79.1,-31.7C90.2,-22.4,92.1,-4.4,90,13.2C87.8,30.8,81.6,48,70.5,61.4C59.4,74.7,43.4,84.2,27,86.5C10.5,88.9,-6.4,84.3,-19.3,75.8C-32.2,67.4,-41,55.3,-52.7,44.3C-64.4,33.3,-79.1,23.4,-82.2,10.9C-85.4,-1.5,-77.1,-16.5,-68.9,-30.1C-60.6,-43.8,-52.4,-56.3,-40.9,-62.7C-29.4,-69.1,-14.7,-69.4,-2.8,-65.1C9.1,-60.7,18.2,-51.6,32.9,-46.7Z;
+      
+      M30.1,-47.8C40.4,-40.5,51.8,-36.3,63.1,-27.8C74.4,-19.3,85.7,-6.4,82.4,4.5C79.1,15.4,61.1,24.3,50.7,36.6C40.3,49,37.6,64.7,27.7,71.6C17.8,78.5,0.7,76.6,-13.2,69.5C-27.1,62.3,-37.8,50,-47.5,38.4C-57.3,26.7,-66.1,15.7,-66.4,4.2C-66.6,-7.3,-58.4,-19.4,-51.6,-34.4C-44.8,-49.4,-39.3,-67.3,-28.1,-74.7C-16.9,-82.1,-0.1,-78.9,13.5,-70.2C27.2,-61.6,38.6,-47.8,30.1,-47.8Z;
+      
+      M38.2,-57.6C48.4,-47.5,54.3,-35,62.1,-20.9C69.9,-6.8,79.6,8.8,75.6,21.1C71.6,33.3,53.8,42.2,38.5,48.4C23.2,54.6,10.4,58,0.2,57.7C-10,57.5,-20,53.7,-33.4,49.1C-46.9,44.5,-63.9,39,-67.6,28.8C-71.3,18.6,-61.7,3.6,-55.8,-10.7C-49.9,-24.9,-47.5,-38.4,-39.5,-49.1C-31.4,-59.9,-17.8,-67.8,-2.7,-64.5C12.4,-61.3,28,-67.6,38.2,-57.6Z;
+      
+      M34.6,-54.3C45.2,-42.4,54.3,-33.8,65.3,-21.1C76.3,-8.4,89.3,8.5,88.5,25C87.6,41.4,72.8,57.5,55.8,67.9C38.8,78.3,19.4,83.1,2.7,79.6C-14.1,76.1,-28.2,64.3,-38.7,52.3C-49.2,40.3,-56.2,28.1,-62.7,13.5C-69.3,-1.1,-75.4,-18.2,-71,-31.9C-66.5,-45.7,-51.4,-56.2,-36.9,-66.8C-22.3,-77.4,-8.4,-88.2,1.8,-90.8C12,-93.3,24,-66.3,34.6,-54.3Z;
+      
+      M32.9,-46.7C47.6,-41.8,68,-41.1,79.1,-31.7C90.2,-22.4,92.1,-4.4,90,13.2C87.8,30.8,81.6,48,70.5,61.4C59.4,74.7,43.4,84.2,27,86.5C10.5,88.9,-6.4,84.3,-19.3,75.8C-32.2,67.4,-41,55.3,-52.7,44.3C-64.4,33.3,-79.1,23.4,-82.2,10.9C-85.4,-1.5,-77.1,-16.5,-68.9,-30.1C-60.6,-43.8,-52.4,-56.3,-40.9,-62.7C-29.4,-69.1,-14.7,-69.4,-2.8,-65.1C9.1,-60.7,18.2,-51.6,32.9,-46.7Z
+    " />
+    
+    <!-- Rotation animation for blob -->
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="infinite" additive="sum" />
+  </path>
+
+  <!-- Space for your icon in center -->
+  <circle cx="100" cy="100" r="30" fill="#F5F1E6" opacity="0.85" />
+  
+  <!-- Steam effect elements -->
+  <g filter="url(#steam)">
+    <path d="M85,70 Q100,50 115,70" fill="none" stroke="#F5F1E6" stroke-width="2" opacity="0.6">
+      <animate attributeName="d" values="M85,70 Q100,50 115,70;M85,70 Q100,40 115,70;M85,70 Q100,50 115,70" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite" />
+    </path>
+    <path d="M90,65 Q100,45 110,65" fill="none" stroke="#F5F1E6" stroke-width="2" opacity="0.5">
+      <animate attributeName="d" values="M90,65 Q100,45 110,65;M90,65 Q100,35 110,65;M90,65 Q100,45 110,65" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Subtle inner highlights -->
+  <path d="M80,90 Q100,70 120,90" fill="none" stroke="#D0B49F" stroke-width="2" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="5s" repeatCount="indefinite" />
+  </path>
+</svg>
