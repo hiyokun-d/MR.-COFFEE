@@ -2,7 +2,7 @@ const container = document.getElementById("coffee-bean")
 document.addEventListener('DOMContentLoaded', function () {
   for (let i = 0; i < 80; i++) {
     const bean = document.createElement("img");
-    bean.src = "./assets/background-Icon .svg"; // or .png if you're using that
+    bean.src = "./assets/background-icon .svg"; // or .png if you're using that
     bean.alt = "bean";
     bean.classList.add("floating-bean");
 
